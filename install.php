@@ -1,22 +1,22 @@
 <?php
 /*
- * Copyright 2005-2016 OCSInventory-NG/OCSInventory-ocsreports contributors.
+ * Copyright 2005-2017 PluginsOCSInventory-NG/vmware-vcloud-director contributors.
  * See the Contributors file for more details about them.
  *
- * This file is part of OCSInventory-NG/OCSInventory-ocsreports.
+ * This file is part of PluginsOCSInventory-NG/vmware-vcloud-director.
  *
- * OCSInventory-NG/OCSInventory-ocsreports is free software: you can redistribute
+ * PluginsOCSInventory-NG/vmware-vcloud-director is free software: you can redistribute
  * it and/or modify it under the terms of the GNU General Public License as
- * published by the Free Software Foundation, either version 2 of the License,
+ * published by the Free Software Foundation, either version 3 of the License,
  * or (at your option) any later version.
  *
- * OCSInventory-NG/OCSInventory-ocsreports is distributed in the hope that it
+ * PluginsOCSInventory-NG/vvmware-vcloud-director is distributed in the hope that it
  * will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty
  * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with OCSInventory-NG/OCSInventory-ocsreports. if not, write to the
+ * along with PluginsOCSInventory-NG/vmware-vcenter. if not, write to the
  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
  * MA 02110-1301, USA.
  */
@@ -34,6 +34,9 @@ function plugin_init_vcloud()
 {
 
 $object = new plugins;
+
+// Add menu
+$object -> add_menu ("vcloud","23000","vcloud","Vcloud Director Management","plugins");
 
 // VMWARE Vcloud table
 $object -> sql_query("CREATE TABLE IF NOT EXISTS `VMWARE_VCLOUD` (
@@ -132,6 +135,8 @@ function plugin_delete_vcloud()
 {
 
 $object = new plugins;
+// Del menu
+$object -> del_menu ("vcloud","23000","Vcloud Director Management","plugins");
 // VMWARE Vcloud table
 $object -> sql_query("DROP TABLE `VMWARE_VCLOUD`;");
 $object -> sql_query("DROP TABLE `VMWARE_VCLOUD_VDC`;");
