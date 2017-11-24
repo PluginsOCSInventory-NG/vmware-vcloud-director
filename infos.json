@@ -4,7 +4,7 @@
   "contributor" : [],
   "supportedAgent" : ["Unix"],
   "description" : {
-    "fr" : "Permet d'interroger l'API vmware vcloud director et de renvoyer les informations lors de l'inventaire",
-    "en" : "Call vmware vcloud inventory API and send retrivied informations in inventory"
+    "fr" : "Permet d'interroger l'API VMware vCloud Director et de renvoyer les informations lors de l'inventaire",
+    "en" : "Call VMware vCloud inventory API and send retrivied informations in inventory"
   }
 }
