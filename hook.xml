@@ -6,7 +6,7 @@
     </hook>
     <hook type="submenu">
         <mainmenuidentifier>ms_extension</mainmenuidentifier>
-        <identifier>ms_vcloud</identifier>
+        <identifier>ms_vmware_vcloud_director</identifier>
         <translation>34000</translation>
     </hook>
 </hookstore>
